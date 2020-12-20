@@ -19,7 +19,8 @@ public class scr_player : MonoBehaviour
     }
     public States player_state = States.Walking;
 
-    public bool CanFish = false;
+    public bool can_fish = false;
+    private bool casting = false;
 
     Vector2 movement;
 
@@ -32,18 +33,51 @@ public class scr_player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // get input
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-
-        // set animations
-        animator.SetFloat("horizontal", movement.x);
-        animator.SetFloat("vertical", movement.y);
-        animator.SetFloat("speed", movement.sqrMagnitude);
-        if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
+        if (player_state == States.Walking)
         {
-            animator.SetFloat("last_x", Input.GetAxisRaw("Horizontal"));
-            animator.SetFloat("last_y", Input.GetAxisRaw("Vertical"));
+            // get input
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+
+            // set animations
+            animator.SetFloat("horizontal", movement.x);
+            animator.SetFloat("vertical", movement.y);
+            animator.SetFloat("speed", movement.sqrMagnitude);
+            if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
+            {
+                animator.SetFloat("last_x", Input.GetAxisRaw("Horizontal"));
+                animator.SetFloat("last_y", Input.GetAxisRaw("Vertical"));
+            }
+
+            if (fishtarget.GetComponent<scr_fishtarget>().can_fish == true)
+            {
+                can_fish = true;
+            }
+            else
+            {
+                can_fish = false;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space) && casting == false)
+            {
+                player_state = States.Fishing;
+                casting = true;
+                StartCoroutine(cast_timer());
+            }
+
+        }
+
+        
+
+
+        if (player_state == States.Fishing)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && casting == false)
+            {
+                player_state = States.Walking;
+                casting = true;
+                StartCoroutine(cast_timer());
+            }
         }
     }
 
@@ -54,5 +88,11 @@ public class scr_player : MonoBehaviour
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         }
         
+    }
+
+    IEnumerator cast_timer()
+    {
+        yield return new WaitForSeconds(1f);
+        casting = false;
     }
 }
