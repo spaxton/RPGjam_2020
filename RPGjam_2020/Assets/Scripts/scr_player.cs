@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class scr_player : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class scr_player : MonoBehaviour
 
     public bool can_fish = false;
     private bool casting = false;
+    private bool fishing;
 
     Vector2 movement;
 
@@ -62,7 +64,9 @@ public class scr_player : MonoBehaviour
             {
                 player_state = States.Fishing;
                 casting = true;
+                fishing = true;
                 StartCoroutine(cast_timer());
+                StartCoroutine(fish_bite());
             }
 
         }
@@ -76,6 +80,7 @@ public class scr_player : MonoBehaviour
             {
                 player_state = States.Walking;
                 casting = true;
+                fishing = false;
                 StartCoroutine(cast_timer());
             }
         }
@@ -94,5 +99,18 @@ public class scr_player : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         casting = false;
+    }
+
+    IEnumerator fish_bite()
+    {
+        float wait = Random.Range(3f, 6f);
+
+        yield return new WaitForSeconds(wait);
+
+        if (fishing)
+        {
+            SceneManager.LoadScene(1);
+        }
+
     }
 }

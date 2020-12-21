@@ -55,6 +55,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\scr_player.cs" />
     <Compile Include="Assets\Scripts\scr_fishtarget.cs" />
+    <Compile Include="Assets\Scripts\scr_fish.cs" />
+    <Compile Include="Assets\Scripts\scr_fishing_combat.cs" />
+    <Compile Include="Assets\Scripts\scr_UI_manager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
