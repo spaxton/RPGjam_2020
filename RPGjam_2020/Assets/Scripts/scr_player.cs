@@ -54,17 +54,20 @@ public class scr_player : MonoBehaviour
             if (fishtarget.GetComponent<scr_fishtarget>().can_fish == true)
             {
                 can_fish = true;
+                //Debug.Log("can fish");
             }
             else
             {
                 can_fish = false;
+                //Debug.Log("can't fish");
             }
 
-            if (Input.GetKeyDown(KeyCode.Space) && casting == false)
+            if (Input.GetKeyDown(KeyCode.Space) && casting == false && can_fish)
             {
                 player_state = States.Fishing;
                 casting = true;
                 fishing = true;
+                animator.SetBool("fishing", true);
                 StartCoroutine(cast_timer());
                 StartCoroutine(fish_bite());
             }
@@ -81,6 +84,7 @@ public class scr_player : MonoBehaviour
                 player_state = States.Walking;
                 casting = true;
                 fishing = false;
+                animator.SetBool("fishing", false);
                 StartCoroutine(cast_timer());
             }
         }

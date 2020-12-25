@@ -27,8 +27,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -66,23 +68,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1756}
     - Class: 114
-      Script: {instanceID: 2348}
+      Script: {instanceID: 1852}
     - Class: 114
-      Script: {instanceID: 2842}
+      Script: {instanceID: 2350}
     - Class: 114
-      Script: {instanceID: 3058}
+      Script: {instanceID: 2810}
     - Class: 114
-      Script: {instanceID: 3330}
+      Script: {instanceID: 2844}
     - Class: 114
-      Script: {instanceID: 3690}
+      Script: {instanceID: 3062}
     - Class: 114
-      Script: {instanceID: 3852}
+      Script: {instanceID: 3334}
     - Class: 114
-      Script: {instanceID: 16374}
+      Script: {instanceID: 3564}
     - Class: 114
-      Script: {instanceID: 17360}
+      Script: {instanceID: 3696}
     - Class: 114
-      Script: {instanceID: 21332}
+      Script: {instanceID: 3858}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -135,19 +137,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1678}
     - Class: 114
-      Script: {instanceID: 1900}
+      Script: {instanceID: 1902}
     - Class: 114
-      Script: {instanceID: 2776}
+      Script: {instanceID: 2778}
     - Class: 114
-      Script: {instanceID: 2856}
+      Script: {instanceID: 2860}
     - Class: 114
-      Script: {instanceID: 2942}
+      Script: {instanceID: 2946}
     - Class: 114
-      Script: {instanceID: 3164}
+      Script: {instanceID: 3168}
     - Class: 114
-      Script: {instanceID: 3172}
+      Script: {instanceID: 3176}
     - Class: 114
-      Script: {instanceID: 3722}
+      Script: {instanceID: 3728}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -311,6 +313,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineFixedSignal
+  - hash:
+      serializedVersion: 2
+      Hash: d925c6d5606b2fa722044017b520afd5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: scr_UI_manager
   - hash:
       serializedVersion: 2
       Hash: 344a8c2e106a0a4e098e91a52e0af063
@@ -541,6 +549,12 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: e3f8e759fe3297460226fdac3a3a984f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: scr_fish
+  - hash:
+      serializedVersion: 2
       Hash: 0fb27be807aa299702f28ad0bcad1f46
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -763,6 +777,12 @@ ScriptsOnlyBuild:
     className: CinemachineTrack
   - hash:
       serializedVersion: 2
+      Hash: 71056aeeda632c9f6c44f968ef48c110
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: scr_fishing_combat
+  - hash:
+      serializedVersion: 2
       Hash: b5c3dbcb94925c8b595ad16a62b44788
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -893,24 +913,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
-  - hash:
-      serializedVersion: 2
-      Hash: e3f8e759fe3297460226fdac3a3a984f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: scr_fish
-  - hash:
-      serializedVersion: 2
-      Hash: 71056aeeda632c9f6c44f968ef48c110
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: scr_fishing_combat
-  - hash:
-      serializedVersion: 2
-      Hash: d925c6d5606b2fa722044017b520afd5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: scr_UI_manager
   platform: 5
   scenePathNames:
   - Assets/Scenes/OnDeck.unity
