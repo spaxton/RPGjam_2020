@@ -60,6 +60,48 @@ public class scr_fish : MonoBehaviour
         }
     }
 
+    public bool DiveDeep()
+    {
+        if (energy > 4)
+        {
+            energy = energy - 4;
+            tens = tens + Random.Range(10, 20);
+            dist = dist + Random.Range(1, 4);
+
+            CheckEnd();
+            return true;
+        }
+        else
+        {
+            energy = energy + Random.Range(1, 3);
+            tens = tens - Random.Range(2, 8);
+
+            CheckEnd();
+            return false;
+        }
+    }
+
+    public bool JukeSide()
+    {
+        if (energy > 4)
+        {
+            energy = energy - 4;
+            tens = tens - Random.Range(15, 25);
+            dist = dist - Random.Range(2, 6);
+
+            CheckEnd();
+            return true;
+        }
+        else
+        {
+            energy = energy + Random.Range(1, 3);
+            tens = tens - Random.Range(2, 8);
+
+            CheckEnd();
+            return false;
+        }
+    }
+
     void CheckEnd()
     {
         if (dist < 1)

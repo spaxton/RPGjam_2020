@@ -8,7 +8,7 @@ public enum BattleState { START, PLAYERTURN, FISHTURN, WON, LOST }
 
 public class scr_fishing_combat : MonoBehaviour
 {
-    public GameObject fishPrefab;
+    public GameObject[] fishPrefabs;
     public Transform fishStage;
 
     scr_fish fishUnit;
@@ -35,11 +35,14 @@ public class scr_fishing_combat : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
-        GameObject fishGO = Instantiate(fishPrefab, fishStage);
+        var fishIndex = Random.Range(0, fishPrefabs.Length);
+
+        GameObject fishGO = Instantiate(fishPrefabs[fishIndex], fishStage);
         fishUnit = fishGO.GetComponent<scr_fish>();
         fishUnit.dist = fishUnit.dist + Random.Range(-20,10);
 
         mainText.text = "An unidentified fish is on the line...";
+        //Debug.Log("Fish: " + fishUnit.fishName);
 
         UIman.updateUI(fishUnit);
 
@@ -142,20 +145,56 @@ public class scr_fishing_combat : MonoBehaviour
     IEnumerator FishTurn()
     {
         // pick a random action
-        // check if there is enough energy
-        // if not, rest
         // if so, do the thing
 
-        bool fishSwam = fishUnit.SwimAway();
+        var fishAct = Random.Range(0, 2);
 
-        if (fishSwam)
+        if(fishAct == 0)
         {
-            mainText.text = "The fish struggles against the line.";
-        } else
-        {
-            mainText.text = "The fish recovers its energy.";
+            bool fishSwam = fishUnit.SwimAway();
+
+            if (fishSwam)
+            {
+                mainText.text = "The fish struggles against the line.";
+            }
+            else
+            {
+                mainText.text = "The fish recovers its energy.";
+            }
+            UIman.updateUI(fishUnit);
         }
-        UIman.updateUI(fishUnit);
+
+        if(fishAct == 1)
+        {
+            bool fishDove = fishUnit.DiveDeep();
+
+            if (fishDove)
+            {
+                mainText.text = "The fish dives away from the boat.";
+            }
+            else
+            {
+                mainText.text = "The fish recovers its energy.";
+            }
+            UIman.updateUI(fishUnit);
+        }
+
+        if(fishAct == 2)
+        {
+            bool fishJuke = fishUnit.JukeSide();
+
+            if (fishJuke)
+            {
+                mainText.text = "The fish flaisl wildly!";
+            }
+            else
+            {
+                mainText.text = "The fish recovers its energy.";
+            }
+            UIman.updateUI(fishUnit);
+        }
+
+        
 
         yield return new WaitForSeconds(2f);
 

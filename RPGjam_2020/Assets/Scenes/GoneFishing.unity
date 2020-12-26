@@ -1052,8 +1052,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e01e7f89b025fc34db12568a5fa27e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishPrefab: {fileID: 4594506990788098520, guid: 9037862d880aa88418033278b8276e8b,
-    type: 3}
+  fishPrefabs:
+  - {fileID: 4594506990788098520, guid: 9037862d880aa88418033278b8276e8b, type: 3}
+  - {fileID: 3361102715809086391, guid: 3af4d0583fba8c944b0a8abde2a7a87a, type: 3}
+  - {fileID: 4658354258695306572, guid: c66dc8de92618e9499ef72d7d41aa482, type: 3}
+  - {fileID: 4344091900559916459, guid: 884088f0dd50c2a46bdd052cad9bff2d, type: 3}
+  - {fileID: 231297638072728799, guid: 00b5cd6678d13e949807ee5141f7e243, type: 3}
+  - {fileID: 3807987591951390609, guid: 50a6c31664059ab4f8a829259832a7de, type: 3}
   fishStage: {fileID: 1051793342}
   mainText: {fileID: 1487727820}
   UIman: {fileID: 596344408}
