@@ -132,8 +132,8 @@ MonoBehaviour:
   shown: {fileID: 21300000, guid: 1e144d5ff9e367f448d9747fba1136a2, type: 3}
   dist: 60
   maxDist: 60
-  energy: 12
-  maxEnergy: 12
+  energy: 10
+  maxEnergy: 10
   tens: 40
   escaped: 0
   caught: 0

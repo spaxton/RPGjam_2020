@@ -1059,6 +1059,12 @@ MonoBehaviour:
   - {fileID: 4344091900559916459, guid: 884088f0dd50c2a46bdd052cad9bff2d, type: 3}
   - {fileID: 231297638072728799, guid: 00b5cd6678d13e949807ee5141f7e243, type: 3}
   - {fileID: 3807987591951390609, guid: 50a6c31664059ab4f8a829259832a7de, type: 3}
+  - {fileID: 4489800547593741200, guid: 26d67c38ddbee744db444acb9ec08cd5, type: 3}
+  - {fileID: 5122331670753437504, guid: 8b66486e3e268e84381b2db1eb1db43f, type: 3}
+  - {fileID: 6926372845894723228, guid: ee9e52966ecb4244d8bda6b717a41eef, type: 3}
+  - {fileID: 8781741415860820633, guid: 4745e23e3db79944ba19d3af8486eff5, type: 3}
+  - {fileID: 8016670235273968280, guid: e34e7e1edca254841b21977920b8a5ad, type: 3}
+  - {fileID: 5121552002937378191, guid: 4bb835412b4863f4889f3d07b8b544be, type: 3}
   fishStage: {fileID: 1051793342}
   mainText: {fileID: 1487727820}
   UIman: {fileID: 596344408}

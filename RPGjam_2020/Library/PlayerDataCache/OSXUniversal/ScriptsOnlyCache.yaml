@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - scr_DeckUI
     - scr_UI_manager
     - scr_fish
     - scr_fishing_combat
@@ -27,10 +28,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -135,22 +134,40 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 1502}
+    - Class: 114
       Script: {instanceID: 1678}
     - Class: 114
       Script: {instanceID: 1902}
     - Class: 114
+      Script: {instanceID: 2350}
+    - Class: 114
       Script: {instanceID: 2778}
+    - Class: 114
+      Script: {instanceID: 2844}
     - Class: 114
       Script: {instanceID: 2860}
     - Class: 114
       Script: {instanceID: 2946}
     - Class: 114
+      Script: {instanceID: 3062}
+    - Class: 114
       Script: {instanceID: 3168}
     - Class: 114
       Script: {instanceID: 3176}
     - Class: 114
+      Script: {instanceID: 3334}
+    - Class: 114
+      Script: {instanceID: 3696}
+    - Class: 114
       Script: {instanceID: 3728}
+    - Class: 114
+      Script: {instanceID: 3858}
+    - Class: 114
+      Script: {instanceID: 29440}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -159,6 +176,12 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     - Class: 850595691
       Script: {instanceID: 0}
@@ -777,7 +800,7 @@ ScriptsOnlyBuild:
     className: CinemachineTrack
   - hash:
       serializedVersion: 2
-      Hash: 71056aeeda632c9f6c44f968ef48c110
+      Hash: 20d61e6dec4f880835e5ab0d2c3fd6bc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: scr_fishing_combat
@@ -913,6 +936,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: d57bf331f825596987e3212c320d66ce
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: scr_DeckUI
   platform: 2
   scenePathNames:
   - Assets/Scenes/OnDeck.unity

@@ -19,6 +19,7 @@ public class scr_player : MonoBehaviour
         Fishing
     }
     public States player_state = States.Walking;
+    States prev_state;
 
     public bool can_fish = false;
     private bool casting = false;
@@ -35,6 +36,7 @@ public class scr_player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (player_state == States.Walking)
         {
             // get input
@@ -62,7 +64,7 @@ public class scr_player : MonoBehaviour
                 //Debug.Log("can't fish");
             }
 
-            if (Input.GetKeyDown(KeyCode.Space) && casting == false && can_fish)
+            if (Input.GetKeyDown(KeyCode.Space) && casting == false && can_fish == true)
             {
                 player_state = States.Fishing;
                 casting = true;
@@ -97,6 +99,18 @@ public class scr_player : MonoBehaviour
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         }
         
+    }
+
+    public void StartReading()
+    {
+        prev_state = player_state;
+        //Debug.Log("saved state: " + prev_state);
+        player_state = States.Reading;
+    }
+
+    public void StopReading()
+    {
+        player_state = prev_state;
     }
 
     IEnumerator cast_timer()

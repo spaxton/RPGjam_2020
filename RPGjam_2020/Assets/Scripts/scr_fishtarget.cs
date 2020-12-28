@@ -56,7 +56,6 @@ public class scr_fishtarget : MonoBehaviour
             this.transform.position = new Vector3(player_trans.position.x + hor_mod, player_trans.position.y + ver_mod - 0.6f, this.transform.position.z);
             //Debug.Log("can't fish");
             can_fish = false;
-            //Debug.Log("moving");
         }
 
         lastPos = player_trans.position;
