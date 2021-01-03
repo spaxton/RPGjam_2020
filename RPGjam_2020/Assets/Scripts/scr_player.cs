@@ -10,6 +10,9 @@ public class scr_player : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public GameObject fishtarget;
+    public GameObject interTarget;
+
+    public GameObject DeckUI;
 
     public enum States
     {
@@ -22,8 +25,10 @@ public class scr_player : MonoBehaviour
     States prev_state;
 
     public bool can_fish = false;
+    public bool can_int = false;
     private bool casting = false;
     private bool fishing;
+    public bool input;
 
     Vector2 movement;
 
@@ -36,7 +41,7 @@ public class scr_player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // BASE state
         if (player_state == States.Walking)
         {
             // get input
@@ -51,18 +56,50 @@ public class scr_player : MonoBehaviour
             {
                 animator.SetFloat("last_x", Input.GetAxisRaw("Horizontal"));
                 animator.SetFloat("last_y", Input.GetAxisRaw("Vertical"));
+                input = true;
+            } else
+            {
+                input = false;
             }
 
-            if (fishtarget.GetComponent<scr_fishtarget>().can_fish == true)
+            // provide context
+            if (fishtarget.GetComponent<scr_fishtarget>().can_fish == true && input == false || interTarget.GetComponent<scr_interTarget>().can_int == true && input == false)
             {
-                can_fish = true;
-                //Debug.Log("can fish");
-            }
-            else
+                // fishing context
+                if (fishtarget.GetComponent<scr_fishtarget>().can_fish == true)
+                {
+                    can_fish = true;
+                    can_int = false;
+                    //Debug.Log("can fish");
+                    if (DeckUI.GetComponent<scr_DeckUI>().ContextUp == false)
+                    {
+                        DeckUI.GetComponent<scr_DeckUI>().canfish_trigger();
+                    }
+                }
+
+                // reading context
+                if(interTarget.GetComponent<scr_interTarget>().can_int == true)
+                {
+                    can_int = true;
+                    can_fish = false;
+                    //Debug.Log("can't fish");
+                    if (DeckUI.GetComponent<scr_DeckUI>().ContextUp == false)
+                    {
+                        DeckUI.GetComponent<scr_DeckUI>().canread_trigger();
+                    }
+                }
+            } else
             {
                 can_fish = false;
+                can_int = false;
                 //Debug.Log("can't fish");
+                if (DeckUI.GetComponent<scr_DeckUI>().ContextUp == true)
+                {
+                    DeckUI.GetComponent<scr_DeckUI>().drop_context();
+                }
             }
+
+            // do things!
 
             if (Input.GetKeyDown(KeyCode.Space) && casting == false && can_fish == true)
             {
@@ -72,12 +109,17 @@ public class scr_player : MonoBehaviour
                 animator.SetBool("fishing", true);
                 StartCoroutine(cast_timer());
                 StartCoroutine(fish_bite());
+                DeckUI.GetComponent<scr_DeckUI>().canreel_trigger();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space) && interTarget.GetComponent<scr_interTarget>().can_int == true)
+            {
+                DeckUI.GetComponent<scr_DeckUI>().spawnNote();
             }
 
         }
 
-        
-
+        // GO fish
 
         if (player_state == States.Fishing)
         {
@@ -88,7 +130,10 @@ public class scr_player : MonoBehaviour
                 fishing = false;
                 animator.SetBool("fishing", false);
                 StartCoroutine(cast_timer());
+                DeckUI.GetComponent<scr_DeckUI>().canfish_trigger();
             }
+
+            
         }
     }
 

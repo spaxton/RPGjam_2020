@@ -18,7 +18,7 @@ public class scr_weatherMan : MonoBehaviour
 
         for(int i = 0; i < starting_clouds; i++)
         {
-            Vector3 rand_pos = new Vector3(Random.Range(-7f, 8f), Random.Range(3f, 5f),0f);
+            Vector3 rand_pos = new Vector3(Random.Range(-7f, 8f), Random.Range(3f, 4f),0f);
             cloud_inst = Instantiate(cloud_prefab, rand_pos, Quaternion.identity);
             cloud_inst.transform.parent = transform;
         }

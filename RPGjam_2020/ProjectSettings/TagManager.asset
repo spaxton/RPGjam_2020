@@ -6,6 +6,7 @@ TagManager:
   tags:
   - fishing_spot
   - cloud
+  - interact
   layers:
   - Default
   - TransparentFX

@@ -12,7 +12,7 @@ public class scr_fishtarget : MonoBehaviour
     private Vector3 lastPos;
     private Vector3 player_vel;
     private Vector3 player_dir;
-    private bool good_spot = true;
+    private bool good_spot = false;
     public bool can_fish = false;
 
     // Start is called before the first frame update
