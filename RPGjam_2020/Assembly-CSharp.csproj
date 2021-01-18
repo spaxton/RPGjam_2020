@@ -53,6 +53,7 @@
     <UnityVersion>2020.2.0f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\scr_note.cs" />
     <Compile Include="Assets\Scripts\scr_player.cs" />
     <Compile Include="Assets\Scripts\scr_wave.cs" />
     <Compile Include="Assets\Scripts\scr_UI_manager.cs" />
@@ -61,9 +62,9 @@
     <Compile Include="Assets\Scripts\scr_fish.cs" />
     <Compile Include="Assets\Scripts\scr_weatherMan.cs" />
     <Compile Include="Assets\Scripts\scr_fishing_combat.cs" />
-    <Compile Include="Assets\Scripts\scr_fishtarget.cs" />
-    <Compile Include="Assets\Scripts\scr_note.cs" />
     <Compile Include="Assets\Scripts\scr_interTarget.cs" />
+    <Compile Include="Assets\Scripts\scr_fishtarget.cs" />
+    <Compile Include="Assets\Scripts\scr_level_loader.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -19,6 +19,11 @@ public class scr_fishing_combat : MonoBehaviour
 
     public BattleState state;
 
+    public GameObject loader_prefab;
+
+    public Animator fish_motion;
+    public Animator player_motion;
+
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +45,7 @@ public class scr_fishing_combat : MonoBehaviour
         GameObject fishGO = Instantiate(fishPrefabs[fishIndex], fishStage);
         fishUnit = fishGO.GetComponent<scr_fish>();
         fishUnit.dist = fishUnit.dist + Random.Range(-20,10);
+        fish_motion = fishGO.GetComponent<Animator>();
 
         mainText.text = "An unidentified fish is on the line...";
         //Debug.Log("Fish: " + fishUnit.fishName);
@@ -56,6 +62,8 @@ public class scr_fishing_combat : MonoBehaviour
     {
         fishUnit.GetReeled();
         UIman.updateUI(fishUnit);
+        fish_motion.SetTrigger("reel");
+        player_motion.SetTrigger("reel");
         mainText.text = "You reel with all your might!";
 
         yield return new WaitForSeconds(2f);
@@ -75,6 +83,8 @@ public class scr_fishing_combat : MonoBehaviour
     {
         fishUnit.LetOut();
         UIman.updateUI(fishUnit);
+        fish_motion.SetTrigger("let");
+        player_motion.SetTrigger("let");
         mainText.text = "You release some tension from the line.";
 
         yield return new WaitForSeconds(2f);
@@ -97,11 +107,12 @@ public class scr_fishing_combat : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
+        fish_motion.SetTrigger("gotaway");
         mainText.text = "The fish got away...";
 
         yield return new WaitForSeconds(2f);
 
-        SceneManager.LoadScene(0);
+        loader_prefab.GetComponent<scr_level_loader>().LoadLevel(0, 1);
 
     }
 
@@ -110,21 +121,24 @@ public class scr_fishing_combat : MonoBehaviour
         mainText.text = "The fish unhooked itself!";
 
         yield return new WaitForSeconds(2f);
-        
+
+        fish_motion.SetTrigger("gotaway");
         mainText.text = "The fish got away...";
 
         yield return new WaitForSeconds(2f);
 
-        SceneManager.LoadScene(0);
+        loader_prefab.GetComponent<scr_level_loader>().LoadLevel(0, 1);
     }
 
     IEnumerator Release()
     {
+        player_motion.SetTrigger("unhook");
+        fish_motion.SetTrigger("gotaway");
         mainText.text = "You let the fish return to the ocean.";
 
         yield return new WaitForSeconds(2f);
 
-        SceneManager.LoadScene(0);
+        loader_prefab.GetComponent<scr_level_loader>().LoadLevel(0, 1);
     }
 
     IEnumerator FishReveal()
@@ -138,7 +152,7 @@ public class scr_fishing_combat : MonoBehaviour
 
         yield return new WaitForSeconds(4f);
 
-        SceneManager.LoadScene(0);
+        loader_prefab.GetComponent<scr_level_loader>().LoadLevel(0, 1);
 
     }
 
@@ -155,10 +169,12 @@ public class scr_fishing_combat : MonoBehaviour
 
             if (fishSwam)
             {
+                fish_motion.SetTrigger("swim");
                 mainText.text = "The fish struggles against the line.";
             }
             else
             {
+                fish_motion.SetTrigger("rest");
                 mainText.text = "The fish recovers its energy.";
             }
             UIman.updateUI(fishUnit);
@@ -170,10 +186,12 @@ public class scr_fishing_combat : MonoBehaviour
 
             if (fishDove)
             {
+                fish_motion.SetTrigger("dive");
                 mainText.text = "The fish dives away from the boat.";
             }
             else
             {
+                fish_motion.SetTrigger("rest");
                 mainText.text = "The fish recovers its energy.";
             }
             UIman.updateUI(fishUnit);
@@ -185,10 +203,12 @@ public class scr_fishing_combat : MonoBehaviour
 
             if (fishJuke)
             {
+                fish_motion.SetTrigger("juke");
                 mainText.text = "The fish flaisl wildly!";
             }
             else
             {
+                fish_motion.SetTrigger("rest");
                 mainText.text = "The fish recovers its energy.";
             }
             UIman.updateUI(fishUnit);

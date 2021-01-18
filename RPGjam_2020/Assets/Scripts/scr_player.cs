@@ -30,12 +30,35 @@ public class scr_player : MonoBehaviour
     private bool fishing;
     public bool input;
 
+    public GameObject loader_prefab;
+    private bool moved;
+
     Vector2 movement;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        // start in the same position you were in
+        if (PlayerPrefs.GetInt("moved") == 1)
+        {
+            moved = true;
+        }
+        Vector3 position;
+        if (moved == false)
+        {
+            position.x = 1.5f;
+            position.y = -1.34f;
+            position.z = 0f;
+            moved = true;
+            PlayerPrefs.SetInt("moved", 1);
+        }
+        else
+        {
+            position.x = PlayerPrefs.GetFloat("player_x");
+            position.y = PlayerPrefs.GetFloat("player_y");
+            position.z = PlayerPrefs.GetFloat("player_z");
+        }
+        transform.position = position;
     }
 
     // Update is called once per frame
@@ -172,7 +195,11 @@ public class scr_player : MonoBehaviour
 
         if (fishing)
         {
-            SceneManager.LoadScene(1);
+            StartReading();
+            PlayerPrefs.SetFloat("player_x", gameObject.transform.position.x);
+            PlayerPrefs.SetFloat("player_y", gameObject.transform.position.y);
+            PlayerPrefs.SetFloat("player_z", gameObject.transform.position.z);
+            loader_prefab.GetComponent<scr_level_loader>().LoadLevel(1, 2);
         }
 
     }
