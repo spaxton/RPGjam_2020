@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishName: Tuna
   fishRarity: Common
+  prefName: Tuna
   darkened: {fileID: 4344091900529579345}
   shown: {fileID: 21300000, guid: 4177dc260dc02084b9c1517d02cd28d3, type: 3}
   dist: 60

@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishName: Red Snapper
   fishRarity: Uncommon
+  prefName: Snapper
   darkened: {fileID: 5122331670850834362}
   shown: {fileID: 21300000, guid: 954bd479f7f1d274c9c3c1420dc1e680, type: 3}
   dist: 60

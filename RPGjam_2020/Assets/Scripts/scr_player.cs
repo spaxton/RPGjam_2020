@@ -10,6 +10,7 @@ public class scr_player : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public GameObject fishtarget;
+    public GameObject splashPrefab;
     public GameObject interTarget;
 
     public GameObject DeckUI;
@@ -132,6 +133,7 @@ public class scr_player : MonoBehaviour
                 animator.SetBool("fishing", true);
                 StartCoroutine(cast_timer());
                 StartCoroutine(fish_bite());
+                StartCoroutine(make_a_splash());
                 DeckUI.GetComponent<scr_DeckUI>().canreel_trigger();
             }
 
@@ -201,6 +203,38 @@ public class scr_player : MonoBehaviour
             PlayerPrefs.SetFloat("player_z", gameObject.transform.position.z);
             loader_prefab.GetComponent<scr_level_loader>().LoadLevel(1, 2);
         }
+
+    }
+
+    IEnumerator make_a_splash()
+    {
+        Vector3 posMod = new Vector3(0,0,0);
+
+        
+        if (fishtarget.transform.position.y < transform.position.y)
+        {
+            posMod = new Vector3(0, -0.25f, 0);
+        }
+        if (fishtarget.transform.position.y + 0.2 > transform.position.y)
+        {
+            posMod = new Vector3(0, 0.2f, 0);
+        }
+        if (fishtarget.transform.position.x < transform.position.x)
+        {
+            posMod = new Vector3(-0.55f, -0.15f, 0.1f);
+        }
+        if (fishtarget.transform.position.x > transform.position.x)
+        {
+            posMod = new Vector3(0.55f, -0.15f, 0.1f);
+        }
+        
+        
+        
+
+        yield return new WaitForSeconds(0.3f);
+
+        GameObject splash_inst = Instantiate(splashPrefab, fishtarget.transform.position + posMod, Quaternion.identity);
+        splash_inst.GetComponent<scr_waterfx>().SpecAnim("splash");
 
     }
 }

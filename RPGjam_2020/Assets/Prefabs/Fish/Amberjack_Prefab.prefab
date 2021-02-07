@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishName: Amberjack
   fishRarity: Uncommon
+  prefName: Amberjack
   darkened: {fileID: 231297638103241765}
   shown: {fileID: 21300000, guid: 4177dc260dc02084b9c1517d02cd28d3, type: 3}
   dist: 70

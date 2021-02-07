@@ -1,0 +1,178 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.0f1 (3721df5a8b28) revision 3613151'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'en' Physical Memory: 8143 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/sethpaxton/Desktop/Projects/RPGjam/RPGjam_2020_git/RPGjam_2020
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+63831
+Successfully changed project path to: C:/Users/sethpaxton/Desktop/Projects/RPGjam/RPGjam_2020_git/RPGjam_2020
+C:/Users/sethpaxton/Desktop/Projects/RPGjam/RPGjam_2020_git/RPGjam_2020
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 94.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.0f1 (3721df5a8b28)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/sethpaxton/Desktop/Projects/RPGjam/RPGjam_2020_git/RPGjam_2020/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.0]
+    Renderer: NVIDIA Quadro FX 3800 (ID=0x5ff)
+    Vendor:   
+    VRAM:     989 MB
+    Driver:   21.21.13.4201
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56544
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002207 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 24.76 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unable to find bridge dll in registry for Microsoft Visual Studio Tools for Unity for C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.176 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.147022 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.001 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.35 seconds
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1316 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 63.1 MB.
+System memory in use after: 63.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1758.
+Total: 2.512200 ms (FindLiveObjects: 0.158500 ms CreateObjectMapping: 0.067900 ms MarkObjects: 2.170100 ms  DeleteObjects: 0.114300 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/scr_level_loader.cs
+  artifactKey: Guid(7a3bd5eda0d1ca149b49752be1c3ad96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/scr_level_loader.cs using Guid(7a3bd5eda0d1ca149b49752be1c3ad96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2701d58b46d51a0c07fe3f157dbe563e') in 0.424882 seconds
+  Import took 0.494827 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.194522 seconds.
+  path: Assets/Prefabs/LevelLoader.prefab
+  artifactKey: Guid(24efe91b4da7b0a4c94d80d7b7ffe7c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/LevelLoader.prefab using Guid(24efe91b4da7b0a4c94d80d7b7ffe7c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '482f2af2c21d262a93e9124d89ba3bc3') in 0.294594 seconds
+  Import took 0.372144 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.108292 seconds.
+  path: Assets/Prefabs/LevelLoader.prefab
+  artifactKey: Guid(24efe91b4da7b0a4c94d80d7b7ffe7c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/LevelLoader.prefab using Guid(24efe91b4da7b0a4c94d80d7b7ffe7c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '482f2af2c21d262a93e9124d89ba3bc3') in 0.022448 seconds
+  Import took 0.025685 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 864.686174 seconds.
+  path: Assets/Scripts/scr_interTarget.cs
+  artifactKey: Guid(84c77b990fb9ec04abad5d2fc31f1d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/scr_interTarget.cs using Guid(84c77b990fb9ec04abad5d2fc31f1d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '213e62c85f5912bd66d0f194b7c9b3e4') in 0.007431 seconds
+  Import took 0.037543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.779180 seconds.
+  path: Assets/Scripts/scr_fishtarget.cs
+  artifactKey: Guid(239f649cca469ff48a431d03ff1fc9a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/scr_fishtarget.cs using Guid(239f649cca469ff48a431d03ff1fc9a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbb9eef5648d26efc2d01409f2bc7cba') in 0.007224 seconds
+  Import took 0.035157 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.155173 seconds.
+  path: Assets/Scripts/scr_DeckUI.cs
+  artifactKey: Guid(08db277d07085ff4cb808d14f6497a8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/scr_DeckUI.cs using Guid(08db277d07085ff4cb808d14f6497a8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '585a71e2c5ac0cb1a23beacd3adfc981') in 0.009575 seconds
+  Import took 0.012681 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001916 seconds.
+  path: Assets/Scripts/scr_DeckUI.cs
+  artifactKey: Guid(08db277d07085ff4cb808d14f6497a8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/scr_DeckUI.cs using Guid(08db277d07085ff4cb808d14f6497a8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '585a71e2c5ac0cb1a23beacd3adfc981') in 0.003651 seconds
+  Import took 0.006359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.499911 seconds.
+  path: Assets/Scripts/scr_fishing_combat.cs
+  artifactKey: Guid(e01e7f89b025fc34db12568a5fa27e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/scr_fishing_combat.cs using Guid(e01e7f89b025fc34db12568a5fa27e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38c8ee8d29bbfce3c591abaf8d3c3794') in 0.006710 seconds
+  Import took 0.021391 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 748.581248 seconds.
+  path: Assets/Scripts/scr_wave.cs
+  artifactKey: Guid(f53d09f6b59289547bb2ebd9a30f089e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/scr_wave.cs using Guid(f53d09f6b59289547bb2ebd9a30f089e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a9fe8b0bd7847d28714b3313a88754f') in 0.008738 seconds
+  Import took 0.029301 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.975884 seconds.
+  path: Assets/Scripts/scr_cloud.cs
+  artifactKey: Guid(7ef9526d5d66cf54f85ae5e5beb5b710) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/scr_cloud.cs using Guid(7ef9526d5d66cf54f85ae5e5beb5b710) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06d1a66f2665a6b08386d4cfbf423f31') in 0.007503 seconds
+  Import took 0.013668 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 758.234736 seconds.
+  path: Assets/Scripts/scr_player.cs
+  artifactKey: Guid(9d10193dd1f686c438901d111590640b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/scr_player.cs using Guid(9d10193dd1f686c438901d111590640b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e05e6ef36ecd0639044c52cc147a54ab') in 0.009621 seconds
+  Import took 0.048965 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013931 seconds.
+  path: Assets/Scripts/scr_player.cs
+  artifactKey: Guid(9d10193dd1f686c438901d111590640b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/scr_player.cs using Guid(9d10193dd1f686c438901d111590640b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e05e6ef36ecd0639044c52cc147a54ab') in 0.004272 seconds
+  Import took 0.007633 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -6,6 +6,7 @@ public class scr_fish : MonoBehaviour
 {
     public string fishName;
     public string fishRarity;
+    public string prefName;
 
     public SpriteRenderer darkened;
     public Sprite shown;
@@ -120,5 +121,10 @@ public class scr_fish : MonoBehaviour
             freed = true;
             escaped = true;
         }
+    }
+
+    public void FishCaught()
+    {
+        PlayerPrefs.SetInt(prefName, PlayerPrefs.GetInt(prefName, 0) + 1);
     }
 }

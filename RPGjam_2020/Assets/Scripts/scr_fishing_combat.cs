@@ -32,12 +32,6 @@ public class scr_fishing_combat : MonoBehaviour
         StartCoroutine(SetupBattle());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     IEnumerator SetupBattle()
     {
         var fishIndex = Random.Range(0, fishPrefabs.Length);
@@ -147,6 +141,7 @@ public class scr_fishing_combat : MonoBehaviour
 
         UIman.revealFish(fishUnit);
         fishUnit.darkened.sprite = fishUnit.shown;
+        fishUnit.FishCaught();
 
         mainText.text = "You caught a " + fishUnit.fishName + "!";
 

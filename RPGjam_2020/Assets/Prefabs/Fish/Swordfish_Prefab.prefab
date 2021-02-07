@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishName: Swordfish
   fishRarity: Rare
+  prefName: Swordfish
   darkened: {fileID: 4658354258725819830}
   shown: {fileID: 21300000, guid: 1e144d5ff9e367f448d9747fba1136a2, type: 3}
   dist: 100

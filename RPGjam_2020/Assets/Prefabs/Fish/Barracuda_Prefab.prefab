@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishName: Barracuda
   fishRarity: Rare
+  prefName: Barracuda
   darkened: {fileID: 5121552003041082741}
   shown: {fileID: 21300000, guid: e625af9eba1eae8468ae5a43d6a9f26e, type: 3}
   dist: 80

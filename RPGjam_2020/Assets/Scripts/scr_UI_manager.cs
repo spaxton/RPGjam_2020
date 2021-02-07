@@ -11,16 +11,41 @@ public class scr_UI_manager : MonoBehaviour
     public Text FishName;
     public Text FishRarity;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    bool Paused = false;
+    public GameObject PauseMenu;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Paused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+    }
+
+    void Pause()
+    {
+        PauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        Paused = true;
+    }
+
+    public void Resume()
+    {
+        PauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        Paused = false;
+    }
+
+    public void EndGame()
+    {
+        Application.Quit();
     }
 
     public void updateUI(scr_fish fish)

@@ -8,6 +8,7 @@ TagManager:
   - cloud
   - interact
   - fish
+  - chop
   layers:
   - Default
   - TransparentFX
@@ -56,4 +57,7 @@ TagManager:
     locked: 0
   - name: Sort_4
     uniqueID: 2012864809
+    locked: 0
+  - name: Sort_5
+    uniqueID: 55706713
     locked: 0

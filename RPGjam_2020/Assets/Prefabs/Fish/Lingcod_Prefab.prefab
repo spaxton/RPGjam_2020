@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishName: Lingcod
   fishRarity: Rare
+  prefName: Lingcod
   darkened: {fileID: 6926372845857967718}
   shown: {fileID: 21300000, guid: 954bd479f7f1d274c9c3c1420dc1e680, type: 3}
   dist: 70

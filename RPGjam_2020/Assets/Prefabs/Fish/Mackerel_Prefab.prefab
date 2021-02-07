@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishName: King Mackerel
   fishRarity: Common
+  prefName: Mackerel
   darkened: {fileID: 8781741415958426211}
   shown: {fileID: 21300000, guid: e625af9eba1eae8468ae5a43d6a9f26e, type: 3}
   dist: 60

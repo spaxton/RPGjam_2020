@@ -57,6 +57,7 @@
     <Compile Include="Assets\Scripts\scr_player.cs" />
     <Compile Include="Assets\Scripts\scr_wave.cs" />
     <Compile Include="Assets\Scripts\scr_UI_manager.cs" />
+    <Compile Include="Assets\Scripts\scr_level_loader.cs" />
     <Compile Include="Assets\Scripts\scr_cloud.cs" />
     <Compile Include="Assets\Scripts\scr_DeckUI.cs" />
     <Compile Include="Assets\Scripts\scr_fish.cs" />
@@ -64,7 +65,8 @@
     <Compile Include="Assets\Scripts\scr_fishing_combat.cs" />
     <Compile Include="Assets\Scripts\scr_interTarget.cs" />
     <Compile Include="Assets\Scripts\scr_fishtarget.cs" />
-    <Compile Include="Assets\Scripts\scr_level_loader.cs" />
+    <Compile Include="Assets\Scripts\scr_cat.cs" />
+    <Compile Include="Assets\Scripts\scr_waterfx.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
